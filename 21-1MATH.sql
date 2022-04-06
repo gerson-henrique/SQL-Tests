@@ -1,0 +1,51 @@
+SELECT 5 + 5;
+SELECT 5 - 5;
+SELECT 5 * 5;
+SELECT 10 MOD 3;
+
+
+SELECT rental_duration + rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration - rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration / rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration * rental_rate FROM sakila.film LIMIT 10;
+
+SELECT IF((15 MOD 2) = 0, 'é Par', 'é impar') as parouimpar;
+
+SELECT 220 DIV 21;
+SELECT 220 MOD 21;
+
+
+SELECT ROUND(10.4925); -- 10
+SELECT ROUND(10.5136); -- 11
+SELECT ROUND(-10.5136); -- -11
+SELECT ROUND(10.4925, 2); -- 10.49
+SELECT ROUND(10.4925, 3); -- 10.493
+
+Copiar
+SELECT CEIL(10.51); -- 11
+SELECT CEIL(10.49); -- 11
+SELECT CEIL(10.2); -- 11
+SELECT FLOOR(10.51); -- 10
+SELECT FLOOR(10.49); -- 10
+SELECT FLOOR(10.2); -- 10
+
+SELECT POW(2, 2); -- 4
+SELECT POW(2, 4); -- 16
+SELECT SQRT(9); -- 3
+SELECT SQRT(16); -- 4
+
+SELECT RAND();
+SELECT ROUND( 15 + (RAND()*5));
+
+SELECT ROUND(15.7515971,5);
+
+SELECT FLOOR(39.494);
+SELECT CEIL(85.234);
+
+SELECT CURRENT_DATE();
+SELECT NOW();
+SELECT DATEDIFF('2020-01-31', '2020-01-01');
+
+SELECT TIMEDIFF('08:30:10', '09:30:10');
+
+SELECT DATEDIFF('2030-01-20', CURRENT_DATE());
