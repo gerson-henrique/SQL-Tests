@@ -1,0 +1,23 @@
+CREATE SCHEMA IF NOT EXISTS albuns;
+
+CREATE TABLE artista (
+artista_id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50)
+) ENGINE=InnoDB;
+
+CREATE TABLE estilo (
+estilo_id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE album (
+album_id INT PRIMARY KEY AUTO_INCREMENT,
+artista_id INT NOT NULL,
+title VARCHAR(100) NOT NULL,
+price DECIMAL(5,2) NOT NULL,
+estilo_id INT NOT NULL,
+FOREIGN KEY (artista_id) REFERENCES artista (artista_id),
+FOREIGN KEY (estilo_id) REFERENCES estilo(estilo_id)
+) ENGINE=InnoDB;
+
+SHOW TABLES;
